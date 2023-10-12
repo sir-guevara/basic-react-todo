@@ -6,6 +6,7 @@ export default function Item(props) {
     color: "black",
     display: "inline-flex",
     alignItems: "center",
+    textDecoration: props.isDone ? "line-through" : "none",
     justifyContent: "space-between",
     padding: "1px 20px",
     margin: "10px auto",
@@ -16,8 +17,6 @@ export default function Item(props) {
     fontFamily: "monospace",
     fontWeight: "400",
     textTransform: "capitalize",
-    textDecoration: props.isDone ? "line-through" : "none",
-    textDecorationColor: "#2f5bb4",
     transition: "all 1s ease-in-out",
   };
   const { markAsDone } = useItemsContext();
